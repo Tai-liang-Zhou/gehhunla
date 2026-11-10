@@ -54,3 +54,62 @@ button { display: flex; align-items: center; justify-content: space-between; wid
 .lookup-card .input-wrap + button { margin-top: 24px; }
 
 .empty-result .table-illustration { width: 140px; max-width: 100%; height: auto; margin: 0 auto; }
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+  a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #998c78;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    &.active { color: $orange; border-bottom-color: $orange; }
+    &:hover { color: $orange; }
+    &:focus-visible { outline: 2px solid $olive; outline-offset: 5px; }
+  }
+}
+.photos-page {
+  max-width: 760px;
+  margin: auto;
+  padding: 32px 48px 24px;
+  text-align: center;
+  h1 { font-size: 36px; letter-spacing: 5px; margin: 12px 0 36px; transform: rotate(-2deg); }
+  .photos-intro { font-size: 13px; letter-spacing: 2px; color: #998c78; margin: 0 0 34px; }
+}
+.photo-keepsake { position: relative; max-width: 360px; margin: 0 auto; }
+.photo-print {
+  position: relative;
+  margin: 0;
+  padding: 12px 12px 18px;
+  background: #fffcf5;
+  border: 1px solid #e9dfcd;
+  box-shadow: 4px 7px 0 #eae4d780;
+  border-radius: 4px;
+  transform: rotate(-2deg);
+  img { display: block; width: 100%; height: auto; border-radius: 2px; }
+  figcaption { font-family: Georgia, serif; font-style: italic; font-size: 14px; color: #998c78; margin-top: 16px; }
+}
+.photo-flower { position: absolute; z-index: 1; pointer-events: none; }
+.photo-flower-left { width: 72px; left: -42px; bottom: 64px; color: #e8b46f; transform: rotate(-22deg); }
+.photo-flower-right { width: 60px; right: -34px; top: 32px; color: $orange; transform: rotate(18deg); }
+.photo-spark { position: absolute; color: #8faac9; font-size: 48px; left: -50px; top: 16px; }
+.photo-squiggle { position: absolute; width: 88px; right: -43px; bottom: -10px; color: #8faac9; transform: rotate(-15deg); }
+.photos-coming-soon {
+  margin-top: 36px;
+  .photos-status { display: inline-block; padding: 6px 16px; background: #eceede; color: #7c8753; border-radius: 40% 45% 42% 38%; font-size: 11px; letter-spacing: 2px; }
+  h2 { font-size: 19px; line-height: 1.8; margin: 14px 0 6px; }
+  p { color: #998c78; font-size: 12px; line-height: 1.9; }
+}
+.photos-dots { display: flex; justify-content: center; gap: 9px; margin-top: 20px; i { width: 6px; height: 6px; border-radius: 50%; background: #e8b46f; &:nth-child(2) { background: $olive; } &:nth-child(3) { background: #8faac9; } } }
+@media (max-width: 650px) {
+  .site-header { flex-wrap: wrap; gap: 12px; }
+  .site-nav { gap: 14px; a { font-size: 11px; } }
+  .photos-page { padding: 24px 35px; h1 { font-size: 30px; } }
+  .photo-keepsake { max-width: 300px; }
+  .photo-flower-left { width: 48px; left: -25px; bottom: 55px; }
+  .photo-flower-right { width: 44px; right: -23px; }
+  .photo-spark { left: -27px; font-size: 32px; }
+  .photo-squiggle { width: 62px; right: -22px; }
+  .photos-coming-soon h2 { font-size: 16px; }
+}

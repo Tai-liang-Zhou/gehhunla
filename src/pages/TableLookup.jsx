@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import SiteHeader from '../components/SiteHeader';
 import guests from '../../data/guests.json';
 import { lookupGuest } from '../lib/guests';
 import { Flower, TableIllustration } from '../components/Illustrations';
@@ -17,7 +17,7 @@ export default function TableLookup() {
   }
   function changeName(event) { setName(event.target.value); setStatus('idle'); setGuest(null); setMessage(''); }
   return <div className="site-shell">
-    <header className="site-header"><Link className="wordmark" to="/seating"><span>ㄍㄟˋ婚啦</span><Flower className="wordmark-flower"/></Link></header>
+    <SiteHeader />
     <main className="seating-page">
       <section className="main-layout" aria-labelledby="page-title">
         <div className="lookup-card">
